@@ -64,7 +64,7 @@ The following files and their relationships to each other are going to be explai
 
 ### Server.js
 
-In this file, it's connecting to a server establishing a port to be used whether it's express or a localhost 8080. With using localhost, it's a great way to to test and use for development purposes to run your application on your terminal and see whether the functionality of your application is working as it is meant to on your browser and only then, an express server will run when your application is deployed and ready for production. In this file, we require files in the routes directory (html-routes.js and api-routes.js). This is also where data is being parsed so that it may be accepted and stored and in that variable set as "db" this is where the database interacts with the client. Express-session is used to keep trach of the user's login and initializes passport (a dependency that is used for user authentication).
+In this file, it's connecting to a server establishing a port to be used whether it's express or a localhost 8080. With using localhost, it's a great way to to test and use for development purposes to run your application on your terminal and see whether the functionality of your application is working as it is meant to on your browser and only then, an express server will run when your application is deployed and ready for production. In this file, we require files in the routes directory (html-routes.js and api-routes.js). This is also where data is being parsed so that it may be accepted and stored and in that variable set as "db" this is where the database interacts with the client. Express-session is used to keep track of the user's login and initializes passport (a dependency that is used for user authentication).
 
 ### isAuthenticated.js
 
@@ -81,6 +81,9 @@ In this file,
 In this file, this is where we list out our database information used in the development phase where we can run and test our application and its functionality so we set our SQL Workbech details such as username, password, the name of our database, the host and the dialect set as mysql. And in the production is where we set the details ready for deploying our application which is dependent on whether we launch on certain websites so if the user would like to deploy onto heroku the key value pair would be set as the following: "use_env_variable": "JAWSDB_URL",
 "dialect": "mysql".
 
+### passport.js
+
+In this file, it requires the dependencies passport and passport-local as well as requires the database in the models. Using the local strategy is telling passport, to use certain strategies such as username/email and password. And in thi file is where the user inputs in the required fields and then it runs the function that looks for the user's credentials in the database. If the values don't exist then the user recieves a response or a message for incorrect inputs otherwise, if the login credentials are exisiting in the database then the user will be redirected to the members route.
 
 ## Author
 
