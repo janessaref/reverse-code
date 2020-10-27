@@ -71,6 +71,17 @@ In this file, it's connecting to a server establishing a port to be used whether
 In this file, the code restricts the routes to the user. if req.user is true then returns to the next function which redirects these members to the members page otherwise they will be redirected back to the signup page.
 
 
+### html-routes.js
+
+In this file, 
+
+
+### config.json
+
+In this file, this is where we list out our database information used in the development phase where we can run and test our application and its functionality so we set our SQL Workbech details such as username, password, the name of our database, the host and the dialect set as mysql. And in the production is where we set the details ready for deploying our application which is dependent on whether we launch on certain websites so if the user would like to deploy onto heroku the key value pair would be set as the following: "use_env_variable": "JAWSDB_URL",
+"dialect": "mysql".
+
+
 ## Author
 
 * Janessa Reeanne Fong
