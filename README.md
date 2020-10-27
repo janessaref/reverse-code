@@ -83,7 +83,11 @@ In this file, this is where we list out our database information used in the dev
 
 ### passport.js
 
-In this file, it requires the dependencies passport and passport-local as well as requires the database in the models. Using the local strategy is telling passport, to use certain strategies such as username/email and password. And in thi file is where the user inputs in the required fields and then it runs the function that looks for the user's credentials in the database. If the values don't exist then the user recieves a response or a message for incorrect inputs otherwise, if the login credentials are exisiting in the database then the user will be redirected to the members route.
+In this file, it requires the dependencies passport and passport-local as well as requires the database in the models. Using the local strategy is telling passport, to use certain strategies such as username/email and password. And in thi file is where the user inputs in the required fields and then it runs the function that looks for the user's credentials in the database. If the values don't exist then the user recieves a response or a message for incorrect inputs otherwise, if the login credentials are exisiting in the database then the user will be redirected to the members route. Using new LocalStrategy, we specifically want the user to use email as the input field instead of the default of setting up a username. Once authentication passes, it then makes a session and stores as a cookie so that it keeps the authentication state where users don't have to login every time to verify themselves when navigating in other parts/pages/routes in the website.
+
+### index.js
+
+In this file, this requires the file system, path, and sequelize. For fs it's a package the reads and writes files. For the path, it's the path of your local machine and the basename variable is grabbing the filename "index.js" found in our models directory. the config variable is importing or requiring the config.json so that we can set the env variable into development mode. it reads the directories and filters out the files that contain are js files and not including the basename which is the index.js file and creates a new array. The next function is running through each file in the models directory and then 
 
 ## Author
 
