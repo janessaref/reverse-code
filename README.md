@@ -1,8 +1,8 @@
 # Reverse Engineering Code
 
-In this project, I am explaining and giving a walkthrough of the codebase for developers who need a better understanding of the functionality of the application with enough detail.
+In this project, I am explaining and giving a walkthrough of the codebase for developers who need a better understanding of the functionality of the application with enough detail. The following files and their relationships to each other are going to be explained. 
 
-The following files and their relationships to each other are going to be explained.
+This is an application wherein users can login with their email and password or signup as a new user and this creates a unique session for each user. This is a walkthrough that explains how to use the dependecy Passport which authenticates users. As well as, we are using sequelize to create our table in our database, in my case, I am using MySQL Workbench to store the user's credentials as well as requiring a bcryptjs package that encrypts the password of the user to ensure their data is secure and safe within the database that cannot be read by anyone else.
 
 This is the directory structure:
 
@@ -61,7 +61,10 @@ This is the directory structure:
 
 * [Node.js](https://nodejs.org/en/)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [jQuery](#)
+* [jquery](https://jquery.com/)
+* [MySQL](https://www.mysql.com/)
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## Installation
 
@@ -124,13 +127,13 @@ CREATE DATABASE passport_demo;
 
 ## Dependencies Used
   
- * [bcryptjs](#)
- * [express.js](#)
- * [express-session](#)
- * [mysql2](#)
- * [passport](#)
- * [passport-local](#)
- * [sequelize](#)
+ * [bcryptjs](https://www.npmjs.com/package/bcrypt)
+ * [Express.js](https://expressjs.com/)
+ * [express-session](https://www.npmjs.com/package/express-session)
+ * [mysql2](https://www.npmjs.com/package/mysql2)
+ * [passport](http://www.passportjs.org/docs/authenticate/)
+ * [passport-local](http://www.passportjs.org/packages/passport-local/)
+ * [sequelize](https://sequelize.org/v3/)
 
 ## Code Explained
 
