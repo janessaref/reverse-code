@@ -73,7 +73,7 @@ In this file, the code restricts the routes to the user. if req.user is true the
 
 ### html-routes.js
 
-In this file, it requires the path for the reason that it will be using the relative routes to the HTML files in the public directory. It also requires the file in the middleware directory for checking if the user has logged in. This is where the user will be sent to the members page if the user has successfully logged in and this sends the user to the correct path whether they would like to signup or login. The middleware is being passed as the second argument where it runs the function and if the user is logged in, then it will run the next function sends them to the html page for members which is the next argument in the app.get, otherwise it will redirect them back to the login page and this middleware is restricting the access to the members page if the user does not login.
+In this file, it requires the path for the reason that it will be using the relative routes to the HTML files in the public directory. It also requires the file in the middleware directory for checking if the user has logged in. This is where the user will be sent to the members page if the user has successfully logged in and this sends the user to the correct path whether they would like to signup or login. The middleware is being passed as the second argument where it runs the function and if the user is logged in, then it will run the next function sends them to the html page for members which is the next argument in the app.get, otherwise it will redirect them back to the login page and this middleware is restricting the access to the members page if the user does not login. And this is being exported to be required by server.js.
 
 ### api-routes.js
 
@@ -99,8 +99,20 @@ In this file, it requires the bcryptjs package which hashes the user's password.
 
 In this file, there is a method for the user model where it compares the values of the user's input to the encrypted password stored in the database.
 
-The addHook is just setting  of when we prefer to start encrypting the user's password and this case, we set it as "beforeCreate".
+The addHook is just setting of when we prefer to start encrypting the user's password and this case, we set it as "beforeCreate".
 
+
+### login.js, members.js, signup.js
+
+These files contain the functionality of buttons, input fields, etc. that creates the interaction with the user. 
+
+### login.html, members.html, signup.html
+
+These files display the design and layout of each of the pages. It's the main skeleton that contains tags, and hooks (for the js files).
+
+### style.css
+
+This file is linked to the html pages where you can add more customization on styling and design on each of the html pages.
 
 
 ## Author
