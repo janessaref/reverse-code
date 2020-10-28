@@ -4,6 +4,49 @@ In this project, I am explaining and giving a walkthrough of the codebase for de
 
 The following files and their relationships to each other are going to be explained: 
 
+This is the directory structure:
+
+```
+.
+├── config
+│   ├── middleware
+│   │     └── isAuthenticated.js
+│   ├── config.json
+│   └── passport.js         
+│ 
+├── models
+│   ├── index.js
+│   └── user.js
+│
+├── node_modules
+│
+├── public
+│   ├── js
+│   │   ├── login.js
+│   │   ├── members.js
+│   │   └── signup.js
+│   │ 
+│   ├── stylesheets  
+│   │    └── style.css     
+│   ├── login.html  
+│   ├── members.html  
+│   └── signup.html
+│
+├── routes
+│   ├── api-routes.js
+│   └── html-routes.js
+│ 
+├── .gitignore
+│ 
+├── package-lock.json
+│
+├── package.json
+│
+├── README.md  
+│
+└── server.js
+```
+
   * config
     * middleware
         - isAuthenticated.js
