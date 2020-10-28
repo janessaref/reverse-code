@@ -203,6 +203,12 @@ In this file, there is a method for the user model where it compares the values 
 
 The addHook is just setting when do we prefer to start encrypting the user's password and in this case, we set it as "beforeCreate" so even before the user is created, the password is hashed automatically. This file is being required by "passport.js", "api-routes.js" and "server.js".
 
+### README.md
+
+This is a file that contains the description of an application/project containing necessary information on the functionality of the application, installation, technologies used, authors, acknowledgments, licenses, etc. This is a file that further describes and gives explanation for other developers or users to look over to give them a better understanding and/or a set of instructions. It is a form of documentation that goes into detail and can let viewers of the repository know if there were additional changes/updates as well.
+
+## Additional Features
+
 ## Author
 
 * Janessa Reeanne Fong

@@ -1,4 +1,6 @@
+/* creates margins for the forms */
+
 form.signup,
 form.login {
-  margin-top: 50px;
+    margin-top: 50px;
 }

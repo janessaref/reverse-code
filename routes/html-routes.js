@@ -4,6 +4,7 @@ var path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
+// to be used in the server.js
 module.exports = function(app) {
 
     app.get("/", function(req, res) {
