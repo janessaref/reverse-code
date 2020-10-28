@@ -87,7 +87,15 @@ In this file, it requires the dependencies passport and passport-local as well a
 
 ### index.js
 
-In this file, this requires the file system, path, and sequelize. For fs it's a package the reads and writes files. For the path, it's the path of your local machine and the basename variable is grabbing the filename "index.js" found in our models directory. the config variable is importing or requiring the config.json so that we can set the env variable into development mode. it reads the directories and filters out the files that contain are js files and not including the basename which is the index.js file and creates a new array. The next function is running through each file in the models directory and then 
+In this file, this requires the file system, path, and sequelize. For fs it's a package the reads and writes files. For the path, it's the path of your local machine and the basename variable is grabbing the filename "index.js" found in our models directory. the config variable is importing or requiring the config.json so that we can set the env variable into development mode. To set up our database connection it utilizes an if/else statement stating that if we are on production mode, run the "use_env_variable" usually set to "JAWSDB_URL" if we were deploying the application else, the database will run on the development mode. it reads the directories and filters out the files that contain are js files and not including the basename which is the index.js file and creates a new array. The next function is running through each file in the models directory and then storing it into the empty db obect. It allows to keep models in separate files and add new models if any.
+
+### user.js
+
+In this file, it requires the bcryptjs package which hashes the user's password. This is where we create the table named Users using sequelize and the columns included are email and password. For each of the columns, there are settings we put such as validation, unique values, type of data, etc.
+
+In this file, there is a method for the user model where it compares the values of the user's input to the encrypted password stored in the database.
+
+The addHook is just setting  of when we prefer to start encrypting the user's password and this case, we set it as "beforeCreate".
 
 ## Author
 
