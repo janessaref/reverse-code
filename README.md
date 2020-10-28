@@ -75,6 +75,10 @@ In this file, the code restricts the routes to the user. if req.user is true the
 
 In this file, 
 
+### api-routes.js
+
+In this file, it requires the models directory if there were more than one model. It also requires passport.js in the config folder. This file is authenticating the users credentials using local strategy. Once the login is successful then the user will be redirected to the members page. This is where new users also can choose to signup and the password is automatically hashed and stored in the database. The logout route will send the user back to the main login page. If the user is logged in, they can see their date displayed as a response in the "/api/user_data/" otherwise, if they are not logged in, the user will just recieve a response of an empty object.
+
 
 ### config.json
 
@@ -96,6 +100,8 @@ In this file, it requires the bcryptjs package which hashes the user's password.
 In this file, there is a method for the user model where it compares the values of the user's input to the encrypted password stored in the database.
 
 The addHook is just setting  of when we prefer to start encrypting the user's password and this case, we set it as "beforeCreate".
+
+
 
 ## Author
 
