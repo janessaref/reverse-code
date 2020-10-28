@@ -53,7 +53,7 @@ This is the directory structure:
 * [Installation](#installation)
 * [Dependencies Used](#dependencies-used)
 * [Code Explained](#code-explained)
-* [Additional Features](#additonal-features)
+* [Additional Features](#additional-features)
 * [GIF of Project](#gif-of-project)
 * [Author](#author)
 * [License](#license)
