@@ -68,16 +68,16 @@ In this file, it's connecting to a server establishing a port to be used whether
 
 ### isAuthenticated.js
 
-In this file, the code restricts the routes to the user. if req.user is true then returns to the next function which redirects these members to the members page otherwise they will be redirected back to the signup page.
+In this file, the code restricts the routes to the user. if req.user is true then returns to the next function which redirects these members to the members page otherwise they will be redirected back to the signup page. 
 
 
 ### html-routes.js
 
-In this file, 
+In this file, it requires the path for the reason that it will be using the relative routes to the HTML files in the public directory. It also requires the file in the middleware directory for checking if the user has logged in. This is where the user will be sent to the members page if the user has successfully logged in and this sends the user to the correct path whether they would like to signup or login. The middleware is being passed as the second argument where it runs the function and if the user is logged in, then it will run the next function sends them to the html page for members which is the next argument in the app.get, otherwise it will redirect them back to the login page and this middleware is restricting the access to the members page if the user does not login.
 
 ### api-routes.js
 
-In this file, it requires the models directory if there were more than one model. It also requires passport.js in the config folder. This file is authenticating the users credentials using local strategy. Once the login is successful then the user will be redirected to the members page. This is where new users also can choose to signup and the password is automatically hashed and stored in the database. The logout route will send the user back to the main login page. If the user is logged in, they can see their date displayed as a response in the "/api/user_data/" otherwise, if they are not logged in, the user will just recieve a response of an empty object.
+In this file, it requires the models directory if there were more than one model. This file is where we can find the post and get requests. It also requires passport.js in the config folder. This file is authenticating the users credentials using local strategy. If the user's login is valid and successful, they will be redirected to the members page otherwise they will be sent an error if either the username or password input was wrong. This is where new users also can choose to signup and the password is automatically hashed and stored in the database. The logout route will send the user back to the main login page. If the user is logged in, they can see their date displayed as a response in the "/api/user_data/" otherwise, if they are not logged in, the user will just recieve a response of an empty object. This file is where it will grab the data from post requests of the user to be stored in the database and the get requests is where it displays the information to the page. This file is being used by server.js to run the appropriate routes.
 
 
 ### config.json
